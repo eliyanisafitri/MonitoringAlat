@@ -1,0 +1,213 @@
+/* =========================================
+   TABEL PEMINJAMAN - CLEAN MODERN DESIGN
+========================================= */
+
+.tabel-peminjaman {
+    min-width: 1100px;
+    margin-bottom: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+/* HEADER */
+.tabel-peminjaman thead th {
+    background: #252b36 !important;
+    color: #fff !important;
+    padding: 15px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    border: none !important;
+    vertical-align: middle;
+}
+
+/* SEMUA SEL */
+.tabel-peminjaman tbody td {
+    font-size: 12px;
+    padding: 13px 10px;
+    vertical-align: middle;
+}
+
+/* KOLOM INFORMASI TEKNISI */
+.tabel-peminjaman .info-teknisi {
+    background: #f4f8ff !important;
+    border-right: 1px solid #e3eaf5 !important;
+    padding: 18px 15px !important;
+    vertical-align: top !important;
+}
+
+/* NAMA TEKNISI */
+.tabel-peminjaman .info-teknisi h6 {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #2864c5 !important;
+}
+
+/* RINCIAN BARANG */
+.tabel-peminjaman .detail-barang {
+    background: #fff !important;
+    border-bottom: 1px solid #edf0f4 !important;
+    padding: 14px 10px !important;
+}
+
+/* BARIS KELOMPOK TEKNISI */
+.tabel-peminjaman .kelompok-teknisi.group-start td {
+    border-top: 10px solid #f1f3f7 !important;
+}
+
+/* WARNA KOLOM TEKNISI BERGANTIAN */
+.tabel-peminjaman .kelompok-ganjil .info-teknisi {
+    background: #eef4fd !important;
+}
+
+/* GARIS AKHIR KELOMPOK */
+.tabel-peminjaman .kelompok-teknisi.group-end td {
+    border-bottom: 1px solid #dce3ed !important;
+}
+
+/* HOVER BARANG */
+.tabel-peminjaman tbody tr:hover .detail-barang {
+    background: #f7faff !important;
+}
+
+/* BADGE */
+.tabel-peminjaman .badge {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+/* TOMBOL AKSI */
+.tabel-peminjaman .btn {
+    border-radius: 6px;
+}
+
+/* GARIS PEMISAH TEKNISI */
+.tabel-peminjaman .group-start {
+    box-shadow: inset 0 1px 0 #dce3ed;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .tabel-peminjaman {
+        min-width: 1100px;
+    }
+}
+
+/* =========================================
+   RATA TENGAH TABEL PEMINJAMAN
+========================================= */
+
+/* Semua judul dan isi: tengah */
+.tabel-peminjaman thead th,
+.tabel-peminjaman tbody td {
+    text-align: center;
+}
+
+/* Pengecualian: judul "Informasi Teknisi" & "Alat" tetap kiri */
+.tabel-peminjaman thead th:nth-child(2),
+.tabel-peminjaman thead th:nth-child(3) {
+    text-align: left;
+}
+
+/* Pengecualian: isi informasi teknisi & nama barang tetap kiri */
+.tabel-peminjaman .info-teknisi,
+.tabel-peminjaman .detail-barang.fw-bold {
+    text-align: left;
+}
+
+/* Nomor tetap tengah (info-teknisi di atas ikut menimpanya) */
+.tabel-peminjaman td.info-teknisi.text-center {
+    text-align: center;
+}
+
+.search-teknisi {
+    position: relative;
+    max-width: 320px;
+    width: 100%;
+}
+
+.search-teknisi input {
+    padding-left: 38px;
+    border-radius: 8px;
+    border: 1px solid #e0e3e8;
+    font-size: 13px;
+    height: 40px;
+}
+
+.search-teknisi i {
+    position: absolute;
+    left: 13px;
+    top: 13px;
+    color: #8b929a;
+}
+
+.pagination-teknisi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 15px 20px;
+    border-top: 1px solid #ebeef2;
+}
+
+.pagination-teknisi .info-data {
+    color: #6c757d;
+    font-size: 12px;
+}
+
+.pagination-teknisi .pagination {
+    margin: 0;
+}
+
+.pagination-teknisi .page-link {
+    font-size: 12px;
+    padding: 7px 12px;
+    color: #1572e8;
+}
+
+.pagination-teknisi .page-item.active .page-link {
+    background-color: #1572e8;
+    border-color: #1572e8;
+    color: #fff;
+}
+
+/* =========================================
+   PAGINATION PERSEGI / ROUNDED-SQUARE
+========================================= */
+.pagination .page-item .page-link {
+    border-radius: 6px !important; 
+    margin: 0 3px;
+    border: 1px solid #dee2e6;
+    font-weight: 500;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #1572e8;
+    border-color: #1572e8;
+    color: #fff;
+}
+
+.pagination .page-item.disabled .page-link {
+    background-color: #f8f9fa;
+    color: #6c757d;
+}
+
+/* =========================================
+   MENYEMBUNYIKAN TEKS INFO BAWAAN LARAVEL (BOOTSTRAP 5)
+========================================= */
+
+/* Cara 1: Sembunyikan elemen teks/paragraf kecil di dalam navigasi pagination */
+.pagination-teknisi nav p,
+nav .d-flex.justify-content-between > div:first-child,
+nav .d-flex.justify-between.flex-1.items-center > div:first-child {
+    display: none !important;
+}
+
+/* Jika masih muncul, gunakan selector universal ini untuk menyembunyikan teks info bawaan */
+.pagination-teknisi nav div.small,
+.pagination-teknisi nav .text-muted {
+    display: none !important;
+}
